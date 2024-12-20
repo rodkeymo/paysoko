@@ -35,7 +35,7 @@ Before running or deploying the application, ensure you have the following insta
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/rodkeymo/paysoko.git
-   cd your-repository
+   cd paysoko
    ```
 
 2. **Set Up Environment Variables**
@@ -53,19 +53,19 @@ Before running or deploying the application, ensure you have the following insta
 4. **Run Composer Install**
    Install the required PHP dependencies:
    ```bash
-   docker exec laravel_app composer install
+   docker exec paysoko composer install
    ```
 
 5. **Generate Application Key**
    Run this command to generate a new key for your application:
    ```bash
-   docker exec laravel_app php artisan key:generate
+   docker exec paysoko php artisan key:generate
    ```
 
 6. **Run Database Migrations**
    Apply database migrations to set up the schema:
    ```bash
-   docker exec laravel_app php artisan migrate
+   docker exec paysoko php artisan migrate
    ```
 
 7. **Access the Application**
@@ -87,7 +87,7 @@ This project is set up with GitHub Actions for automated testing and deployment.
 
 3. Set up your project directory:
    ```bash
-   mkdir -p /var/www/laravel_project
+   mkdir -p /var/www/paysoko
    ```
 
 ### **Configure GitHub Secrets**
@@ -125,12 +125,12 @@ Here are some useful commands for local development:
 
 - **Run Tests**
   ```bash
-  docker exec laravel_app php artisan test
+  docker exec paysoko php artisan test
   ```
 
 - **Access the Laravel Container**
   ```bash
-  docker exec -it laravel_app bash
+  docker exec -it paysoko bash
   ```
 
 - **Rebuild Docker Containers**
